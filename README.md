@@ -10,6 +10,16 @@ Windows 11 draws a 1 px border around every window. On a dark setup it often sho
 
 Windows has no setting for this. In my testing, turning on *"Show accent color on title bars and window borders"* and setting an accent color did not change it.
 
+## Before / after
+
+![Three windows side by side, before and after](docs/before-after.png)
+
+Zoomed in on the seam between two windows:
+
+![Zoom on the seam between two windows, before and after](docs/before-after-zoom.png)
+
+*Three plain demo windows placed edge to edge on Windows 11. The border is only 1 px wide, so the difference is subtle at normal size; the zoomed view shows it. On this machine the default border measured `#363636` and `#1a1a1a` after.*
+
 ## What this does
 
 It sets the border color of every visible window with the documented `DWMWA_BORDER_COLOR` attribute (Windows 11, build 22000 or newer). A tiny hidden script re-applies the color once per second, so windows you open later are covered too. CPU use is negligible.

@@ -10,6 +10,16 @@ Windows 11 her pencerenin etrafına 1 piksellik bir kenarlık çizer. Koyu temad
 
 Windows bunun için bir ayar sunmuyor. Denediğimde *"Başlık çubuklarında ve pencere kenarlıklarında vurgu rengini göster"* seçeneğini açmak ve vurgu rengini değiştirmek çizgiyi değiştirmedi.
 
+## Önce / sonra
+
+![Yan yana üç pencere, önce ve sonra](docs/before-after.png)
+
+İki pencerenin birleştiği yere yakından bakış:
+
+![İki pencerenin birleştiği yerin yakınlaştırılmış hali, önce ve sonra](docs/before-after-zoom.png)
+
+*Windows 11'de kenar kenara yerleştirilmiş üç sade demo pencere. Kenarlık yalnızca 1 piksel olduğu için normal boyutta fark ince görünür, yakınlaştırılmış görüntü farkı gösterir. Bu bilgisayarda varsayılan kenarlık `#363636`, sonrasında `#1a1a1a` ölçüldü.*
+
 ## Ne yapar?
 
 Her görünür pencerenin kenarlık rengini belgelenmiş `DWMWA_BORDER_COLOR` özniteliğiyle ayarlar (Windows 11, derleme 22000 veya üstü). Küçük, gizli bir betik rengi saniyede bir yeniden uygular, böylece sonradan açtığın pencereler de boyanır. İşlemci kullanımı ihmal edilebilir düzeyde.
